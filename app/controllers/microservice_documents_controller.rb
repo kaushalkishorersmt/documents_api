@@ -3,7 +3,7 @@ class MicroserviceDocumentsController < ApplicationController
 
   # GET /microservice_documents
   def index
-    @microservice_documents = MicroserviceDocument.all
+    @microservice_documents = MicroserviceDocument.order('created_at DESC')
 
     render json: @microservice_documents
   end
